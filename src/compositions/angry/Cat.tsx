@@ -1,9 +1,8 @@
-import {AbsoluteFill} from 'remotion';
-import {Img} from 'remotion';
 import {FC} from 'react';
+import {AbsoluteFill, Img} from 'remotion';
 
-import cat from '../assets/sad-cat.png';
-import {useFade, useOffset} from '../utils';
+import cat from '../../assets/sad-cat.png';
+import {useFade, useOffset} from '../../utils';
 
 type CatProps = {
 	delay?: number;

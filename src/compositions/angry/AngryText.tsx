@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import {FC} from 'react';
-import {useOffset} from '../utils';
+
+import {useOffset} from '../../utils';
 
 type AngryTextProps = {
 	style?: React.CSSProperties;

@@ -6,8 +6,8 @@ import {useVideoConfig} from 'remotion';
 type Offset = {
 	delay?: number;
 	duration?: number;
-	reverse?: boolean;
 	range?: [number, number];
+	reverse?: boolean;
 };
 
 export const useOffset = (offset?: Offset) => {
@@ -16,8 +16,8 @@ export const useOffset = (offset?: Offset) => {
 	const {
 		delay = 0,
 		duration = 30,
-		reverse = false,
 		range = [height, 0],
+		reverse = false,
 	} = offset ?? {};
 
 	const springAnimation = spring({
