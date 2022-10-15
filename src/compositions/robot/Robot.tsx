@@ -1,30 +1,26 @@
 /* eslint-disable react/no-unescaped-entities */
 import { FC } from 'react';
-import { Img, staticFile } from 'remotion';
+import { AbsoluteFill, Img, staticFile } from 'remotion';
 
-import { useFade } from '../../utils';
+import { useFade, useFlip } from '../../utils';
 
 const robot = staticFile('/robot.png');
 
-type RobotProps = {
-	style?: React.CSSProperties;
-};
-
-export const Robot: FC<RobotProps> = ({ style }) => {
-	const fadeOut = useFade({ delay: 60, duration: 30, reverse: true });
+export const Robot: FC = () => {
+	const robotFade = useFade({ duration: 60 });
+	const robotFlip = useFlip({ reverse: true });
 
 	return (
-		<div
-			style={style}
-			className="flex flex-col justify-center items-center h-full bg-red-500"
-		>
-			<h1
-				style={{ opacity: fadeOut }}
-				className="text-gray-100 text-5xl font-bold leading-relaxed mb-10 -mt-5"
+		<AbsoluteFill>
+			<div
+				style={{
+					transform: `translateX(300px) rotateY(${robotFlip}deg)`,
+					opacity: robotFade,
+				}}
+				className="flex justify-center items-center h-full"
 			>
-				Let an AI draw for you!
-			</h1>
-			<Img src={robot} style={{ height: 400, width: 400, opacity: fadeOut }} />
-		</div>
+				<Img src={robot} style={{ height: 400, width: 400 }} />
+			</div>
+		</AbsoluteFill>
 	);
 };
