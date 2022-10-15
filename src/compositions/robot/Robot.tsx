@@ -7,12 +7,11 @@ import { useFade } from '../../utils';
 const robot = staticFile('/robot.png');
 
 type RobotProps = {
-	delay: number;
 	style?: React.CSSProperties;
 };
 
-export const Robot: FC<RobotProps> = ({ delay, style }) => {
-	const fadeOut = useFade({ delay: delay + 60, duration: 30, reverse: true });
+export const Robot: FC<RobotProps> = ({ style }) => {
+	const fadeOut = useFade({ delay: 60, duration: 30, reverse: true });
 
 	return (
 		<div

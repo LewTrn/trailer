@@ -1,31 +1,17 @@
 import { FC } from 'react';
-import { AbsoluteFill, useCurrentFrame, useVideoConfig } from 'remotion';
+import { AbsoluteFill, useVideoConfig } from 'remotion';
 
 import { Robot } from './Robot';
 import { useOffset } from '../../utils';
 
-type RobotProps = {
-	start: number;
-	end: number;
-};
-
-export const RobotComposition: FC<RobotProps> = ({ start, end }) => {
-	const frame = useCurrentFrame();
+export const RobotComposition: FC = () => {
 	const { width } = useVideoConfig();
 
-	const compOffset = useOffset({
-		delay: start,
-		range: [width, 0],
-	});
-
-	if (frame < start || frame > end) return null;
+	const compOffset = useOffset({ range: [width, 0] });
 
 	return (
 		<AbsoluteFill>
-			<Robot
-				style={{ transform: `translateX(${compOffset}px)` }}
-				delay={start}
-			/>
+			<Robot style={{ transform: `translateX(${compOffset}px)` }} />
 		</AbsoluteFill>
 	);
 };
