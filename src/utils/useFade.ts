@@ -1,7 +1,4 @@
-import {interpolate} from 'remotion';
-import {spring} from 'remotion';
-import {useCurrentFrame} from 'remotion';
-import {useVideoConfig} from 'remotion';
+import { interpolate, spring, useCurrentFrame, useVideoConfig } from 'remotion';
 
 type Fade = {
 	delay?: number;
@@ -11,13 +8,13 @@ type Fade = {
 
 export const useFade = (fade?: Fade) => {
 	const frame = useCurrentFrame();
-	const {fps} = useVideoConfig();
-	const {delay = 0, duration = 30, reverse = false} = fade ?? {};
+	const { fps } = useVideoConfig();
+	const { delay = 0, duration = 30, reverse = false } = fade ?? {};
 
 	const springAnimation = spring({
 		fps,
 		frame: frame - delay,
-		config: {damping: 200},
+		config: { damping: 200 },
 		durationInFrames: duration,
 	});
 

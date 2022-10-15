@@ -1,8 +1,4 @@
-import {interpolate} from 'remotion';
-import {spring} from 'remotion';
-import {useCurrentFrame} from 'remotion';
-import {useVideoConfig} from 'remotion';
-
+import { interpolate, spring, useCurrentFrame, useVideoConfig } from 'remotion';
 type Offset = {
 	delay?: number;
 	duration?: number;
@@ -12,7 +8,7 @@ type Offset = {
 
 export const useOffset = (offset?: Offset) => {
 	const frame = useCurrentFrame();
-	const {height, fps} = useVideoConfig();
+	const { height, fps } = useVideoConfig();
 	const {
 		delay = 0,
 		duration = 30,
@@ -23,7 +19,7 @@ export const useOffset = (offset?: Offset) => {
 	const springAnimation = spring({
 		fps,
 		frame: frame - delay,
-		config: {damping: 200},
+		config: { damping: 200 },
 		durationInFrames: duration,
 	});
 
