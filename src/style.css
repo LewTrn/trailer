@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	h1 {
+		@apply text-9xl font-bold leading-loose;
+	}
+	h2 {
+		@apply text-5xl font-bold leading-relaxed;
+	}
+}

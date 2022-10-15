@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { AbsoluteFill, useVideoConfig } from 'remotion';
 
-import { AiText } from './AIText';
+import { AiText } from './AiText';
 import { Robot } from './Robot';
 import { useOffset } from '../../utils';
 

@@ -36,18 +36,18 @@ export const AngryText: FC = () => {
 			style={styles}
 			className="flex flex-col justify-center items-center h-full"
 		>
-			<h1
+			<h2
 				style={{ transform: `translateY(${loveOffset}px)` }}
-				className="text-gray-700 text-5xl font-bold leading-relaxed"
+				className="text-gray-700"
 			>
 				Love drawing games
-			</h1>
-			<h1
+			</h2>
+			<h2
 				style={{ transform: `translateY(${swearOffset}px)` }}
-				className="text-gray-700 text-5xl font-bold leading-relaxed"
+				className="text-gray-700"
 			>
 				But can't draw for #*!$?
-			</h1>
+			</h2>
 		</div>
 	);
 };
