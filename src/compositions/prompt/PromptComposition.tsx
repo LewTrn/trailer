@@ -1,12 +1,18 @@
 import { FC } from 'react';
 import { AbsoluteFill } from 'remotion';
+import { Cards } from './Cards';
 
-import { PromptCards } from './PromptCards';
+import { CardsEntrance } from './CardsEntrance';
+import { PromptInput } from './PromptInput';
+import { PromptTitle } from './PromptTitle';
 
 export const PromptComposition: FC = () => {
 	return (
 		<AbsoluteFill>
-			<PromptCards />
+			<CardsEntrance />
+			<Cards />
+			<PromptTitle />
+			<PromptInput />
 		</AbsoluteFill>
 	);
 };

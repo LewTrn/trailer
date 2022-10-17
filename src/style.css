@@ -9,4 +9,7 @@
 	h2 {
 		@apply text-5xl font-bold leading-relaxed;
 	}
+	h3 {
+		@apply text-3xl;
+	}
 }

@@ -14,7 +14,7 @@ export const AiText: FC = () => {
 			}}
 			className="flex flex-col justify-center items-center h-full"
 		>
-			<h2 className="text-gray-700">Let AI draw for you</h2>
+			<h2 className="text-gray-700">Let AI draw for you!</h2>
 		</div>
 	);
 };
