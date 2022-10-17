@@ -3,12 +3,12 @@ import { AbsoluteFill } from 'remotion';
 
 import { useFade, useScale } from '../../utils';
 
-export const PromptTitle: FC = () => {
+export const DrawTitle: FC = () => {
 	// Entrance
-	const titleScale = useScale({ delay: 60, range: [0, 1] });
+	const titleScale = useScale({ delay: 30, range: [0, 1] });
 
 	// Exit
-	const titleFade = useFade({ delay: 210, reverse: true });
+	const titleFade = useFade({ delay: 300, reverse: true });
 
 	return (
 		<AbsoluteFill className="flex justify-end">
@@ -16,7 +16,7 @@ export const PromptTitle: FC = () => {
 				style={{ opacity: titleFade, transform: `scaleY(${titleScale})` }}
 				className="w-full text-center p-10"
 			>
-				Write a prompt from random words
+				Generate images with AI
 			</h2>
 		</AbsoluteFill>
 	);

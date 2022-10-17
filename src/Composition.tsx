@@ -1,6 +1,7 @@
 import { AbsoluteFill, Sequence } from 'remotion';
 
 import { AngryComposition } from './compositions/angry';
+import { DrawComposition } from './compositions/draw';
 import { PromptComposition } from './compositions/prompt';
 import { RobotComposition } from './compositions/robot';
 import { TitleComposition } from './compositions/title';
@@ -14,11 +15,14 @@ export const MyComposition = () => {
 			<Sequence from={150} durationInFrames={120}>
 				<RobotComposition />
 			</Sequence>
-			<Sequence from={240} durationInFrames={75}>
+			<Sequence from={240} durationInFrames={90}>
 				<TitleComposition />
 			</Sequence>
-			<Sequence from={300}>
+			<Sequence from={330} durationInFrames={240}>
 				<PromptComposition />
+			</Sequence>
+			<Sequence from={570}>
+				<DrawComposition />
 			</Sequence>
 		</AbsoluteFill>
 	);

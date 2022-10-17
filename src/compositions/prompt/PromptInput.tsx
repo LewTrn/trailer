@@ -4,7 +4,7 @@ import { AbsoluteFill, useCurrentFrame } from 'remotion';
 
 import { useType } from '../../utils';
 
-const PROMPT = 'A rainbow cat holding a watermelon';
+const PROMPT = 'A rainbow cat riding a watermelon';
 const SPLIT_PROMPT = PROMPT.split('');
 
 const getPromptText = (frame: number) => {

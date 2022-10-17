@@ -63,9 +63,9 @@ const FlipCard: FC<FlipCardProps> = ({ delay, highlightFrame, word }) => {
 const getHighlight = (index: number) => {
 	switch (index) {
 		case 1:
-			return 123;
+			return 122;
 		case 3:
-			return 128;
+			return 129;
 		case 5:
 			return 164;
 		default:
