@@ -16,10 +16,9 @@ const Spinner: FC<SpinnerProps> = ({ delay, isSwapped = false }) => {
 	const xFlip1 = useFlip({ delay: delay + 15 });
 	const xFlip2 = useFlip({ delay: delay + 75 });
 	const yFlip1 = useFlip({ delay: delay + 45 });
-	const yFlip2 = useFlip({ delay: delay + 105 });
 
 	// Exit
-	const spinnerFadeOut = useFade({ delay: 180, reverse: true });
+	const spinnerFadeOut = useFade({ delay: delay + 75, reverse: true });
 
 	const opacity =
 		spinnerFadeIn < spinnerFadeOut ? spinnerFadeIn : spinnerFadeOut;
@@ -30,11 +29,11 @@ const Spinner: FC<SpinnerProps> = ({ delay, isSwapped = false }) => {
 				opacity,
 				transform: `scale(${spinnerScale}) rotateX(${
 					isSwapped ? yFlip1 : xFlip1
-				}deg) rotateX(${isSwapped ? yFlip2 : xFlip2}deg) rotateY(${
+				}deg) rotateX(${isSwapped ? 0 : xFlip2}deg) rotateY(${
 					isSwapped ? xFlip1 : yFlip1
-				}deg) rotateY(${isSwapped ? xFlip2 : yFlip2}deg)`,
+				}deg) rotateY(${isSwapped ? xFlip2 : 0}deg)`,
 			}}
-			className="w-80 h-80 bg-gray-300 rounded-sm"
+			className="w-80 h-80 bg-gray-300"
 		/>
 	);
 };

@@ -16,6 +16,7 @@ export const Robot: FC = () => {
 				style={{
 					transform: `translateX(300px) rotateY(${robotFlip}deg)`,
 					opacity: robotFade,
+					backfaceVisibility: 'hidden',
 				}}
 				className="flex justify-center items-center h-full"
 			>

@@ -34,7 +34,10 @@ export const Cat: FC = () => {
 
 	return (
 		<AbsoluteFill>
-			<div style={styles} className="flex justify-center items-center h-full">
+			<div
+				style={{ ...styles, backfaceVisibility: 'hidden' }}
+				className="flex justify-center items-center h-full"
+			>
 				<Img src={cat} style={{ height: 400, width: 400 }} />
 			</div>
 		</AbsoluteFill>

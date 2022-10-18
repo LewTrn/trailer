@@ -8,7 +8,7 @@ export const DrawTitle: FC = () => {
 	const titleScale = useScale({ delay: 30, range: [0, 1] });
 
 	// Exit
-	const titleFade = useFade({ delay: 300, reverse: true });
+	const titleFade = useFade({ delay: 210, reverse: true });
 
 	return (
 		<AbsoluteFill className="flex justify-end">

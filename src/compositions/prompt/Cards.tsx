@@ -22,8 +22,6 @@ const FlipCard: FC<FlipCardProps> = ({ delay, highlightFrame, word }) => {
 	const cardScale = useScale({ delay: highlightFrame, range: [1, 1.05] });
 	const cardRotate = useScale({ delay: highlightFrame, range: [0, 2] });
 
-	const highlight = highlightFrame !== undefined && frame >= highlightFrame;
-
 	// Exit
 	const exitDelay = delay + 180;
 
@@ -34,6 +32,9 @@ const FlipCard: FC<FlipCardProps> = ({ delay, highlightFrame, word }) => {
 		frame > exitDelay
 			? { opacity: cardFadeOut, transform: `rotateY(${cardFlipOut}deg)` }
 			: { opacity: cardFadeIn, transform: `rotateY(${cardFlipIn}deg)` };
+
+	const highlight =
+		highlightFrame !== undefined && frame >= highlightFrame && cardFlipOut < 90;
 
 	return (
 		<div
@@ -54,7 +55,7 @@ const FlipCard: FC<FlipCardProps> = ({ delay, highlightFrame, word }) => {
 					highlight ? 'border-green-400 border-4' : ''
 				}`}
 			>
-				{word}
+				{cardFlipOut < 90 && word}
 			</div>
 		</div>
 	);

@@ -1,15 +1,19 @@
 import { FC } from 'react';
 import { AbsoluteFill } from 'remotion';
 
-import { useOffset } from '../../utils';
+import { useFade, useOffset } from '../../utils';
 
 export const DrawInput: FC = () => {
 	const drawOffset = useOffset({ reverse: true, range: [-30, 0] });
+
+	// Exit
+	const drawFade = useFade({ delay: 210, reverse: true });
 
 	return (
 		<AbsoluteFill>
 			<div
 				style={{
+					opacity: drawFade,
 					transform: `translateX(${drawOffset}px)`,
 				}}
 				className="flex justify-center p-20"

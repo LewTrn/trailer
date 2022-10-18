@@ -33,7 +33,7 @@ export const AngryText: FC = () => {
 
 	return (
 		<div
-			style={styles}
+			style={{ ...styles, backfaceVisibility: 'hidden' }}
 			className="flex flex-col justify-center items-center h-full"
 		>
 			<h2
