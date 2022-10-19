@@ -20,7 +20,7 @@ export const useScale = (scale?: Scale) => {
 	const springAnimation = spring({
 		fps,
 		frame: frame - delay,
-		config: { damping: 17 },
+		config: { damping: 16 },
 		durationInFrames: duration,
 	});
 

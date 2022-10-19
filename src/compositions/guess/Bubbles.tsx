@@ -40,7 +40,7 @@ const Bubble: FC<BubbleProps> = ({
 	const bubbleFadeOut = useFade({ delay: delay + 60, reverse: true });
 
 	const textColour = isCorrect && bubbleOffset > 100 ? bubbleColour : '';
-	const border = direction === 'left' ? 'rounded-tl-xl' : 'rounded-tr-xl';
+	const border = direction === 'left' ? 'rounded-br-xl' : 'rounded-bl-xl';
 
 	return (
 		<div

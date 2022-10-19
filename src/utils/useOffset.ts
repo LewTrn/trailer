@@ -4,6 +4,7 @@ type Offset = {
 	duration?: number;
 	range?: [number, number];
 	reverse?: boolean;
+	damping?: number;
 };
 
 export const useOffset = (offset?: Offset) => {
@@ -14,12 +15,13 @@ export const useOffset = (offset?: Offset) => {
 		duration = 30,
 		range = [height, 0],
 		reverse = false,
+		damping = 200,
 	} = offset ?? {};
 
 	const springAnimation = spring({
 		fps,
 		frame: frame - delay,
-		config: { damping: 200 },
+		config: { damping },
 		durationInFrames: duration,
 	});
 

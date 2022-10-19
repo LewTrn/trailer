@@ -3,6 +3,7 @@ import { AbsoluteFill, Sequence } from 'remotion';
 import { AngryComposition } from './compositions/angry';
 import { DrawComposition } from './compositions/draw';
 import { GuessComposition } from './compositions/guess/GuessComposition';
+import { InfoComposition } from './compositions/info';
 import { PromptComposition } from './compositions/prompt';
 import { RobotComposition } from './compositions/robot';
 import { TitleComposition } from './compositions/title';
@@ -25,8 +26,11 @@ export const MyComposition = () => {
 			<Sequence from={570} durationInFrames={270}>
 				<DrawComposition />
 			</Sequence>
-			<Sequence from={840}>
+			<Sequence from={840} durationInFrames={255}>
 				<GuessComposition />
+			</Sequence>
+			<Sequence from={1095}>
+				<InfoComposition />
 			</Sequence>
 		</AbsoluteFill>
 	);
