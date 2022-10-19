@@ -16,7 +16,7 @@ export const GuessTitle: FC = () => {
 				style={{ opacity: titleFade, transform: `scaleY(${titleScale})` }}
 				className="w-full text-center p-10"
 			>
-				Guess the words to score the most points
+				Guess the words to score points
 			</h2>
 		</AbsoluteFill>
 	);

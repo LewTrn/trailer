@@ -1,3 +1,4 @@
+export * from './useColour';
 export * from './useFade';
 export * from './useFlip';
 export * from './useOffset';
