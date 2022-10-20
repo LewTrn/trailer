@@ -16,7 +16,7 @@ export const DrawInput: FC = () => {
 					opacity: drawFade,
 					transform: `translateX(${drawOffset}px)`,
 				}}
-				className="flex justify-center p-20"
+				className="flex justify-center p-16"
 			>
 				<h3 className="relative">
 					A <span className="font-bold">rainbow cat</span> riding a{' '}

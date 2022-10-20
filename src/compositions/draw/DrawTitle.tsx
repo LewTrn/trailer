@@ -14,7 +14,7 @@ export const DrawTitle: FC = () => {
 		<AbsoluteFill className="flex justify-end">
 			<h2
 				style={{ opacity: titleFade, transform: `scaleY(${titleScale})` }}
-				className="w-full text-center p-10"
+				className="w-full text-center p-8"
 			>
 				Generate images with AI
 			</h2>

@@ -9,13 +9,15 @@ export const AiText: FC = () => {
 	return (
 		<div
 			style={{
-				transform: `translateX(-300px) rotateY(${robotFlip}deg)`,
+				transform: `translateX(-275px) rotateY(${robotFlip}deg)`,
 				opacity: robotFade,
 				backfaceVisibility: 'hidden',
 			}}
 			className="flex flex-col justify-center items-center h-full"
 		>
-			<h2 className="text-gray-700">Let AI draw for you!</h2>
+			<h2 className="text-gray-700">
+				Let <span className="text-red-main">AI</span> do the drawing!
+			</h2>
 		</div>
 	);
 };

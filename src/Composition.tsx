@@ -1,5 +1,7 @@
 import { AbsoluteFill, Sequence } from 'remotion';
 
+import './font.css';
+
 import { AngryComposition } from './compositions/angry';
 import { DrawComposition } from './compositions/draw';
 import { GuessComposition } from './compositions/guess/GuessComposition';

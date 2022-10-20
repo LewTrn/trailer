@@ -51,7 +51,7 @@ const FlipCard: FC<FlipCardProps> = ({ delay, highlightFrame, word }) => {
 						  }
 						: {}
 				}
-				className={`absolute w-48 h-48 flex items-center justify-center rounded-3xl bg-white text-xl shadow-lg ${
+				className={`absolute w-48 h-48 flex items-center justify-center rounded-3xl bg-white text-2xl shadow-lg ${
 					highlight ? 'border-green-400 border-4' : ''
 				}`}
 			>

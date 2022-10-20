@@ -3,13 +3,28 @@
 @tailwind utilities;
 
 @layer base {
+	html {
+		@apply font-Dosis;
+	}
 	h1 {
-		@apply text-9xl font-bold leading-loose;
+		@apply text-9xl font-bold leading-loose text-shadow;
 	}
 	h2 {
-		@apply text-5xl font-bold leading-relaxed;
+		@apply text-6xl font-Dosis font-bold leading-relaxed text-shadow;
 	}
 	h3 {
 		@apply text-3xl;
+	}
+}
+
+@layer components {
+	.image {
+		@apply rounded-md shadow-xl;
+	}
+}
+
+@layer utilities {
+	.text-shadow {
+		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	}
 }

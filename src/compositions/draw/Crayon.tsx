@@ -27,9 +27,9 @@ export const Crayon: FC = () => {
 			<div
 				style={{
 					opacity,
-					transform: `translateX(${220 + drawOffset}px) scale(${buttonPress})`,
+					transform: `translateX(${200 + drawOffset}px) scale(${buttonPress})`,
 				}}
-				className="relative flex justify-center p-20"
+				className="relative flex justify-center p-16"
 			>
 				<div
 					style={{

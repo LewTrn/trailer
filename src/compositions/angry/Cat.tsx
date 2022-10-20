@@ -7,7 +7,7 @@ const cat = staticFile('/sad-cat.png');
 
 const ENTRANCE_DELAY = 75;
 const EXIT_DELAY = 150;
-const OFFSET = 300;
+const OFFSET = 275;
 
 export const Cat: FC = () => {
 	const frame = useCurrentFrame();
@@ -38,7 +38,7 @@ export const Cat: FC = () => {
 				style={{ ...styles, backfaceVisibility: 'hidden' }}
 				className="flex justify-center items-center h-full"
 			>
-				<Img src={cat} style={{ height: 400, width: 400 }} />
+				<Img src={cat} style={{ height: 400, width: 400 }} className="image" />
 			</div>
 		</AbsoluteFill>
 	);

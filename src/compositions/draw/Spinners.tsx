@@ -33,7 +33,7 @@ const Spinner: FC<SpinnerProps> = ({ delay, isSwapped = false }) => {
 					isSwapped ? xFlip1 : yFlip1
 				}deg) rotateY(${isSwapped ? xFlip2 : 0}deg)`,
 			}}
-			className="w-80 h-80 bg-gray-300"
+			className="w-80 h-80 bg-gray-300 rounded-lg"
 		/>
 	);
 };

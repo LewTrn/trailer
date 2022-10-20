@@ -37,7 +37,7 @@ const Cat: FC<CatProps> = ({ delay, src, flip = 'right' }) => {
 				width: 320,
 				backfaceVisibility: 'hidden',
 			}}
-			className="absolute"
+			className="absolute image"
 		/>
 	);
 };

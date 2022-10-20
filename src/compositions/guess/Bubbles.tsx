@@ -61,7 +61,7 @@ const Bubble: FC<BubbleProps> = ({
 					transform: `translateY(-${bubbleOffset}px) scale(${bubbleScale})`,
 					color: textColour,
 				}}
-				className={`py-3 px-5 shadow-lg rounded-full bg-white text-2xl ${border}`}
+				className={`py-3 px-6 shadow-lg rounded-full bg-white text-3xl ${border}`}
 			>
 				{guess}
 			</div>

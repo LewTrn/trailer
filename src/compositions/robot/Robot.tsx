@@ -14,13 +14,17 @@ export const Robot: FC = () => {
 		<AbsoluteFill>
 			<div
 				style={{
-					transform: `translateX(300px) rotateY(${robotFlip}deg)`,
+					transform: `translateX(275px) rotateY(${robotFlip}deg)`,
 					opacity: robotFade,
 					backfaceVisibility: 'hidden',
 				}}
 				className="flex justify-center items-center h-full"
 			>
-				<Img src={robot} style={{ height: 400, width: 400 }} />
+				<Img
+					src={robot}
+					style={{ height: 400, width: 400 }}
+					className="image"
+				/>
 			</div>
 		</AbsoluteFill>
 	);

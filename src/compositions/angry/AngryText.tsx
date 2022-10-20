@@ -5,7 +5,7 @@ import { useCurrentFrame } from 'remotion';
 import { useFade, useFlip, useOffset } from '../../utils';
 
 const EXIT_DELAY = 150;
-const OFFSET = 300;
+const OFFSET = 275;
 
 export const AngryText: FC = () => {
 	const frame = useCurrentFrame();
@@ -46,7 +46,7 @@ export const AngryText: FC = () => {
 				style={{ transform: `translateY(${swearOffset}px)` }}
 				className="text-gray-700"
 			>
-				But can't draw for #*!$?
+				but can't draw for <span className="text-red-main">#*!$</span>?
 			</h2>
 		</div>
 	);

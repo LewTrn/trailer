@@ -38,11 +38,11 @@ export const PromptInput: FC = () => {
 
 	return (
 		<AbsoluteFill>
-			<div className="flex justify-center p-20">
+			<div className="flex justify-center p-16">
 				<h3 className="relative">
 					<div dangerouslySetInnerHTML={{ __html: promptText }} />
 					{showPipe && (
-						<h3 className="absolute -right-2 -top-1 font-light">|</h3>
+						<p className="absolute -right-2.5 -top-1 font-light text-4xl">|</p>
 					)}
 				</h3>
 			</div>

@@ -35,11 +35,25 @@ const Cat: FC<CatProps> = ({ delay, src, isSwapped, offset }) => {
 		? `scale(${catScale}) rotateY(${yFlip}deg) ${translate}`
 		: `scale(${catScale}) rotateX(${xFlip}deg) ${translate}`;
 
+	const getShadow = () => {
+		if (offset === undefined) return '';
+
+		if (catOffset < 5) return 'shadow-xl';
+
+		if (catOffset < 15) return 'shadow-lg';
+
+		if (catOffset < 35) return 'shadow-md';
+
+		return 'shadow-sm';
+	};
+
 	return (
 		<Img
 			src={src}
 			style={{ opacity: catFade, transform, height: 320, width: 320 }}
-			className={`${offset === undefined ? 'z-10' : ''}`}
+			className={`${
+				offset === undefined ? 'z-10' : ''
+			} image shad ${getShadow()}`}
 		/>
 	);
 };
